@@ -9,12 +9,12 @@ router.get('/animals',(req,res,next)=>{
     
 
 router.post('/animals',(req,res,next)=>{
-    req.body.name && req.body.size && req.body.color && req.body.vailent && req.body.problem && req.body.time && req.body.photo && req.body.type && req.body.exstraDetails && req.body.phoneNumber && req.body.email && req.body.name?
-    Animal.create(req.body)
-    .then((data)=>res.json(data))
-    .catch(next):
+    // req.body.name && req.body.size && req.body.color && req.body.vailent && req.body.problem && req.body.time && req.body.photo && req.body.type && req.body.exstraDetails && req.body.phoneNumber && req.body.email && req.body.name?
+    {Animal.create(req.body)
+    .catch(next)
+    console.log("posted")
     res.json({error:'dont have all the elements'})
-})
+}})
 
 router.delete('/animals/:id', ( req,res,next) => {
     console.log("delete");
