@@ -1,8 +1,8 @@
 const express=require('express')
 const  mongoose  = require('mongoose')
 const app=express()
-const port=5000
-const routes =require('../server/routes/api')
+const port=6000
+const routes =require('../Abandoned-animals-server/routes/api')
 const bodyParser=require('body-parser')
 require('dotenv').config()
 
